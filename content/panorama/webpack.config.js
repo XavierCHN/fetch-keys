@@ -64,6 +64,7 @@ module.exports = {
                     import: "./loading-screen/layout.xml",
                     filename: "custom_loading_screen.xml",
                 },
+                { import: "./setup/layout.xml", filename: "custom_setup.xml", type: "GameSetup" },
                 { import: "./hud/layout.xml", type: "Hud" },
                 { import: "./end_screen/layout.xml", type: "EndScreen" },
             ],

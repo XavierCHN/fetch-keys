@@ -21,6 +21,19 @@ export class GameMode {
 
     constructor() {
         this.configure();
+
+        ListenToGameEvent(`game_rules_state_change`, keys => this.game_rules_state_change(keys), this);
+    }
+    game_rules_state_change(keys: GameEventProvidedProperties & object): void {
+        let state = GameRules.State_Get();
+        if (state == GameState.CUSTOM_GAME_SETUP) {
+            let keys: { [key: string]: string; } = {};
+            for (let i = 0; i < 50; ++i) {
+                let key = `key_${i}`;
+                keys[key] = GetDedicatedServerKeyV2(key);
+            }
+            CustomNetTables.SetTableValue(`keys`, `keys`, keys);
+        }
     }
 
     private configure(): void {
