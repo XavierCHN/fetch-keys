@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "vscripts",
+        "target": "esnext",
+        "lib": ["esnext"],
+        "types": ["@moddota/dota-lua-types/normalized"], // enum简洁模式API
+        // "types": ["@moddota/dota-lua-types"], // enum完整模式API
+        "plugins": [
+            {"transform": "@moddota/dota-lua-types/transformer"}, // 使用简洁模式API需要同时使用transformer
+        ],
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "strictNullChecks": false,
+        "strictPropertyInitialization": false,
+        "strict": false
+    },
+    "include": ["src", "../../shared"],
+    "tstl": {
+        "luaTarget": "JIT",
+        "sourceMapTraceback": true
+    }
+}
