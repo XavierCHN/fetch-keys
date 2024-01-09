@@ -1,8 +1,7 @@
 
 ## Description
 
-this is an easy repo to help you to get the dedicated server key provided by valve dota2 custom games.
-
+this is a simple repo which aimed to get the dota2 dedicated server key provided by valve
 
 ## Usage
 
