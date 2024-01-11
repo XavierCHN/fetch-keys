@@ -8,9 +8,9 @@ this is a simple repo which aimed to get the dota2 dedicated server key provided
 ```
 $ git clone
 $ cd path-to-repo
-$ npm i
-$ npm run dev
-$ npm run launch dota
+$ yarn install
+$ yarn dev
+$ yarn launch dota
 
 $ # launch the game and wait for dota2 to compile the ui ( wait until the game setup ui appears)
 $ # publish this mod to steam
