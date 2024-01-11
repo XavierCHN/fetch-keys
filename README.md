@@ -1,7 +1,7 @@
 
 ## Description
 
-this is a simple repo which aimed to get the dota2 dedicated server key provided by valve
+this is a simple repo for obtaining dota2 dedicated server keys
 
 ## Usage
 
@@ -12,9 +12,10 @@ $ yarn install
 $ yarn dev
 $ yarn launch dota
 
-$ # launch the game and wait for dota2 to compile the ui ( wait until the game setup ui appears)
-$ # publish this mod to steam
-$ # enter the game from the client and start a game of this mod
-$ # copy the keys in the game setup page
-$ # use the key pairs as you wish...
+$ # wait for dota2 to load the game compile the ui ( wait until the team setup page appears)
+$ # publish this mod to steam with workshop tools
+$ # close workshop tools and launch dota2
+$ # enter the game, subscribe the mod published and start
+$ # copy the keys in the team setup page
+$ # use the key pairs as you wish, encrypt your code etc.
 ```
