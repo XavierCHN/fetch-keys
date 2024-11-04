@@ -11,8 +11,6 @@ declare global {
 @reloadable
 export class GameMode {
     public static Precache(this: void, context: CScriptPrecacheContext) {
-        PrecacheResource("particle", "particles/units/heroes/hero_meepo/meepo_earthbind_projectile_fx.vpcf", context);
-        PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts", context);
     }
 
     public static Activate(this: void) {
@@ -30,7 +28,7 @@ export class GameMode {
             let keys: { [key: string]: string; } = {};
             for (let i = 0; i < 50; ++i) {
                 let key = `key_${i}`;
-                keys[key] = GetDedicatedServerKeyV2(key);
+                keys[key] = GetDedicatedServerKeyV3(key);
             }
             CustomNetTables.SetTableValue(`keys`, `keys`, keys);
         }
